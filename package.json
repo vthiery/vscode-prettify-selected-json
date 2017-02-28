@@ -3,6 +3,10 @@
     "displayName": "Prettify selected JSON",
     "description": "Visual Studio Code Prettify Selected JSON Extension",
     "version": "0.0.1",
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:vthiery/vscode-prettify-selected-json.git"
+    },
     "publisher": "vthiery",
     "engines": {
         "vscode": "^1.5.0"
