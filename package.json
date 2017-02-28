@@ -5,7 +5,7 @@
     "version": "0.0.1",
     "repository": {
         "type": "git",
-        "url": "git@github.com:vthiery/vscode-prettify-selected-json.git"
+        "url": "https://github.com/vthiery/vscode-prettify-selected-json"
     },
     "publisher": "vthiery",
     "engines": {
