@@ -1,8 +1,8 @@
 {
     "name": "prettify-selected-json",
-    "displayName": "Prettify selected JSON",
-    "description": "Visual Studio Code Prettify Selected JSON Extension",
-    "version": "0.0.1",
+    "displayName": "Prettify Selected JSON",
+    "description": "VS Code Extension to prettify selected JSON blocks",
+    "version": "1.0.1",
     "repository": {
         "type": "git",
         "url": "https://github.com/vthiery/vscode-prettify-selected-json"
@@ -19,10 +19,12 @@
     ],
     "main": "./out/src/extension",
     "contributes": {
-        "commands": [{
-            "command": "prettifyJSON",
-            "title": "Prettify selected JSON"
-        }]
+        "commands": [
+            {
+                "command": "prettifyJSON",
+                "title": "Prettify selected JSON"
+            }
+        ]
     },
     "scripts": {
         "vscode:prepublish": "tsc -p ./",
@@ -39,5 +41,5 @@
     },
     "dependencies": {
         "jsonlint": "^1.6.2"
-  }
+    }
 }

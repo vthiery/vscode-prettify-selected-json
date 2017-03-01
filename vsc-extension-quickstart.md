@@ -12,4 +12,5 @@
 * set breakpoints in your code inside the sources to debug the extension
 
 ## Make changes
-* changes can be made via pull requests but should always stick to the original purpose of the extension
+* changes can be made via pull requests but should always stick to the original purpose of the extension.
+
