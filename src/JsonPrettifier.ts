@@ -23,8 +23,7 @@ function prettify(textEditor, startLine, endLine) {
     try {
         json = jsonlint.parse(ugly);
     } catch (jsonLintError) {
-        const message: string = jsonLintError.message;
-        const lineNumber = parseInt(message.substring(message.indexOf('line ') + 5, message.indexOf(':')), 10);
+        vscode.window.showInformationMessage(jsonLintError.message);
         return;
     }
     // Stringify the result of jsonlint
