@@ -3,8 +3,6 @@
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
 
-// Use jsonlint to prettify the json
-const jsonlint = require('jsonlint');
 // Use the tabSize defined in user settings
 const INDENT_SPACE = vscode.window.activeTextEditor.options.tabSize;
 
@@ -21,12 +19,12 @@ function prettify(textEditor, startLine, endLine) {
     // Prettify the selection
     let json = null;
     try {
-        json = jsonlint.parse(ugly);
-    } catch (jsonLintError) {
-        vscode.window.showInformationMessage(jsonLintError.message);
+        json = JSON.parse(ugly);
+    } catch (e) {
+        vscode.window.showInformationMessage(e.message);
         return;
     }
-    // Stringify the result of jsonlint
+    // Stringify the result
     let pretty = JSON.stringify(json, null, INDENT_SPACE);
 
     textEditor.edit(builder => {

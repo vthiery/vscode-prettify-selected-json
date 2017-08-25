@@ -2,7 +2,7 @@
     "name": "prettify-selected-json",
     "displayName": "Prettify Selected JSON",
     "description": "VS Code Extension to prettify selected JSON blocks",
-    "version": "1.0.1",
+    "version": "1.0.3",
     "repository": {
         "type": "git",
         "url": "https://github.com/vthiery/vscode-prettify-selected-json"
@@ -38,8 +38,5 @@
         "mocha": "^2.3.3",
         "@types/node": "^6.0.40",
         "@types/mocha": "^2.2.32"
-    },
-    "dependencies": {
-        "jsonlint": "^1.6.2"
     }
 }
