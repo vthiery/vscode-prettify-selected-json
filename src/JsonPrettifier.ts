@@ -3,9 +3,6 @@
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
 
-// Use the tabSize defined in user settings
-const INDENT_SPACE = vscode.window.activeTextEditor.options.tabSize;
-
 // Prettify function
 function prettify(textEditor, startLine, endLine) {
     var range = new vscode.Range(startLine, endLine);
@@ -24,8 +21,10 @@ function prettify(textEditor, startLine, endLine) {
         vscode.window.showInformationMessage(e.message);
         return;
     }
+    // Use the tabSize defined in user settings
+    const indentSpacing = vscode.window.activeTextEditor.options.tabSize;
     // Stringify the result
-    let pretty = JSON.stringify(json, null, INDENT_SPACE);
+    let pretty = JSON.stringify(json, null, indentSpacing);
 
     textEditor.edit(builder => {
         builder.replace(range, pretty);
